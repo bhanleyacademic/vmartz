@@ -1,3 +1,188 @@
 ---
+import {Image} from "astro:assets";
+import FormattedDate from '../../components/FormattedDate.astro';
+import Footer from "../../components/Footer.astro";
+import {getCollection} from "astro:content";
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import InnerBanner from "../../components/innerBanner.astro";
+import Scripts from "../../components/Scripts.astro";
+const events = (await getCollection('events')).sort(
+    (a, b) => b.data.eventDate.valueOf() - a.data.eventDate.valueOf(),
+);
 
+console.log(events);
 ---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <BaseHead title="Events" description="Events Page"/>
+</head>
+
+<body>
+
+<div class="preloader">
+    <img src="/assets/images/loader.png" class="preloader__image" alt="">
+</div><!-- /.preloader -->
+<div class="page-wrapper">
+    <div class="topbar-one">
+        <div class="container">
+            <div class="inner-container">
+                <div class="topbar-one__left">
+                    <a href="mailto:needhelp@potisen.com">needhelp@potisen.com</a>
+                    <a href="tel:666-888-0000">666 888 0000</a>
+                </div><!-- /.topbar-one__left -->
+                <div class="topbar-one__right">
+                    <a href="donation.html"><i class="fa fa-money"></i> Donate Now</a>
+                    <a href="volunteer.html"><i class="fa fa-user-o"></i>Join Us</a>
+                </div><!-- /.topbar-one__right -->
+            </div><!-- /.inner-container -->
+        </div><!-- /.container -->
+    </div><!-- /.topbar-one -->
+    <Header />
+    <InnerBanner title="Events" />
+    <section class="event-one">
+        <div class="container">
+            <div class="row">
+                {events.map(event => (
+                        <div class="col-lg-6">
+                            <div class="event-one__single">
+                                <div class="event-one__image">
+                                    <div class="event-one__image-inner">
+                                         <img src={event.data.heroImage} alt="">
+                                    </div>
+                                </div>
+                                <div class="event-one__content">
+                                    <p class="event-one__date">
+                                        <FormattedDate date={event.data.eventDate}/>
+                                    </p>
+                                    <h3 class="event-one__title"><a
+                                            href=`/event/${event.id}`>{event.data.title}</a></h3>
+
+                                </div>
+                            </div>
+                        </div>
+                ))}
+                            <div class="col-lg-6">
+                                <div class="event-one__single">
+                                    <div class="event-one__image">
+                                        <div class="event-one__image-inner">
+                                            <img src="../../assets/images/event/event-2-1.jpg" alt="">
+                                        </div><!-- /.event-one__image-inner -->
+                                    </div><!-- /.event-one__image -->
+                                    <div class="event-one__content">
+                                        <p class="event-one__date">20 Oct, 2019</p>
+                                        <h3 class="event-one__title"><a href="event-details.html">Let’s meet your
+                                            candidate in america</a></h3><!-- /.event-one__title -->
+                                    </div><!-- /.event-one__content -->
+                                </div><!-- /.event-one__single -->
+                            </div><!-- /.col-lg-6 -->
+                            <div class="col-lg-6">
+                                <div class="event-one__single">
+                                    <div class="event-one__image">
+                                        <div class="event-one__image-inner">
+                                            <img src="/assets/images/event/event-2-2.jpg" alt="">
+                                        </div><!-- /.event-one__image-inner -->
+                                    </div><!-- /.event-one__image -->
+                                    <div class="event-one__content">
+                                        <p class="event-one__date">20 Oct, 2019</p>
+                                        <h3 class="event-one__title"><a href="event-details.html">Let’s meet your
+                                            candidate in america</a></h3><!-- /.event-one__title -->
+                                    </div><!-- /.event-one__content -->
+                                </div><!-- /.event-one__single -->
+                            </div><!-- /.col-lg-6 -->
+                            <div class="col-lg-6">
+                                <div class="event-one__single">
+                                    <div class="event-one__image">
+                                        <div class="event-one__image-inner">
+                                            <img src="/assets/images/event/event-2-3.jpg" alt="">
+                                        </div><!-- /.event-one__image-inner -->
+                                    </div><!-- /.event-one__image -->
+                                    <div class="event-one__content">
+                                        <p class="event-one__date">20 Oct, 2019</p>
+                                        <h3 class="event-one__title"><a href="event-details.html">Let’s meet your
+                                            candidate in america</a></h3><!-- /.event-one__title -->
+                                    </div><!-- /.event-one__content -->
+                                </div><!-- /.event-one__single -->
+                            </div><!-- /.col-lg-6 -->
+                            <div class="col-lg-6">
+                                <div class="event-one__single">
+                                    <div class="event-one__image">
+                                        <div class="event-one__image-inner">
+                                            <img src="/assets/images/event/event-2-4.jpg" alt="">
+                                        </div><!-- /.event-one__image-inner -->
+                                    </div><!-- /.event-one__image -->
+                                    <div class="event-one__content">
+                                        <p class="event-one__date">20 Oct, 2019</p>
+                                        <h3 class="event-one__title"><a href="event-details.html">Let’s meet your
+                                            candidate in america</a></h3><!-- /.event-one__title -->
+                                    </div><!-- /.event-one__content -->
+                                </div><!-- /.event-one__single -->
+                            </div><!-- /.col-lg-6 -->
+                            <div class="col-lg-6">
+                                <div class="event-one__single">
+                                    <div class="event-one__image">
+                                        <div class="event-one__image-inner">
+                                            <img src="/assets/images/event/event-2-5.jpg" alt="">
+                                        </div><!-- /.event-one__image-inner -->
+                                    </div><!-- /.event-one__image -->
+                                    <div class="event-one__content">
+                                        <p class="event-one__date">20 Oct, 2019</p>
+                                        <h3 class="event-one__title"><a href="event-details.html">Let’s meet your
+                                            candidate in america</a></h3><!-- /.event-one__title -->
+                                    </div><!-- /.event-one__content -->
+                                </div><!-- /.event-one__single -->
+                            </div><!-- /.col-lg-6 -->
+                            <div class="col-lg-6">
+                                <div class="event-one__single">
+                                    <div class="event-one__image">
+                                        <div class="event-one__image-inner">
+                                            <img src="/assets/images/event/event-2-6.jpg" alt="">
+                                        </div><!-- /.event-one__image-inner -->
+                                    </div><!-- /.event-one__image -->
+                                    <div class="event-one__content">
+                                        <p class="event-one__date">20 Oct, 2019</p>
+                                        <h3 class="event-one__title"><a href="event-details.html">Let’s meet your
+                                            candidate in america</a></h3><!-- /.event-one__title -->
+                                    </div><!-- /.event-one__content -->
+                                </div><!-- /.event-one__single -->
+                            </div><!-- /.col-lg-6 -->
+                        </div><!-- /.row -->
+                        <div class="post-pagination">
+                            <a href="#"><i class="fa fa-angle-double-left"></i></a>
+                            <a href="#">01</a>
+                            <a href="#">..</a>
+                            <a href="#">04s</a>
+                            <a href="#"><i class="fa fa-angle-double-right"></i></a>
+                        </div><!-- /.post-pagination -->
+                    </div><!-- /.container -->
+                    </section><!-- /.event-one -->
+                    <section class="countdown-one thm-base-bg">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <h3 class="countdown-one__title">Our new campaign <br> starts in:</h3>
+                                    <!-- /.countdown-one__title -->
+                                </div><!-- /.col-lg-6 -->
+                                <div class="col-lg-6 d-flex justify-content-end">
+                                    <div class="countdown-one__right">
+                                        <ul class="countdown-one__list list-unstyled">
+                                            <!-- content loading via js -->
+                                        </ul><!-- /.coundown-one__list -->
+                                    </div><!-- /.countdown-one__right -->
+                                </div><!-- /.col-lg-6 -->
+                            </div><!-- /.row -->
+                        </div><!-- /.container -->
+                    </section><!-- /.countdown-one -->
+                    <Footer/>
+                    </div><!-- /.page-wrapper -->
+
+
+                    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+
+
+<Scripts />
+                    </body>
+
+                    </html>

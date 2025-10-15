@@ -2,22 +2,22 @@
     "use strict";
 
 
-    if ($('.accrodion-grp').length) {
-        var accrodionGrp = $('.accrodion-grp');
-        accrodionGrp.each(function() {
-            var accrodionName = $(this).data('grp-name');
+    if ($('.accordion-grp').length) {
+        var accordionGrp = $('.accordion-grp');
+        accordionGrp.each(function() {
+            var accordionName = $(this).data('grp-name');
             var Self = $(this);
-            var accordion = Self.find('.accrodion');
-            Self.addClass(accrodionName);
-            Self.find('.accrodion .accrodion-content').hide();
-            Self.find('.accrodion.active').find('.accrodion-content').show();
+            var accordion = Self.find('.accordion');
+            Self.addClass(accordionName);
+            Self.find('.accordion .accordion-content').hide();
+            Self.find('.accordion.active').find('.accordion-content').show();
             accordion.each(function() {
-                $(this).find('.accrodion-title').on('click', function() {
+                $(this).find('.accordion-title').on('click', function() {
                     if ($(this).parent().hasClass('active') === false) {
-                        $('.accrodion-grp.' + accrodionName).find('.accrodion').removeClass('active');
-                        $('.accrodion-grp.' + accrodionName).find('.accrodion').find('.accrodion-content').slideUp();
+                        $('.accordion-grp.' + accordionName).find('.accordion').removeClass('active');
+                        $('.accordion-grp.' + accordionName).find('.accordion').find('.accordion-content').slideUp();
                         $(this).parent().addClass('active');
-                        $(this).parent().find('.accrodion-content').slideDown();
+                        $(this).parent().find('.accordion-content').slideDown();
                     };
 
 
@@ -634,8 +634,8 @@
         if ($('.static-banner-one__bg').length) {
             $('.static-banner-one__bg-inner').vegas({
                 slides: [
-                    { src: "assets/images/background/banner-bg-1-1.jpg" },
-                    { src: "assets/images/background/banner-bg-1-2.jpg" }
+                    { src: "assets/images/background/victoria-bg-1-1.png" },
+                    //{ src: "assets/images/background/victoria-bg-1-2.png" }
                 ],
                 transition: 'slideUp',
                 timer: false

@@ -1,26 +1,26 @@
-.faq-accrodion {
+.faq-accordion {
 
-    .accrodion {
+    .accordion {
 
-        +.accrodion {
+        +.accordion {
             margin-top: 10px;
         }
 
         &.active {
             
 
-            .accrodion-title:before {
+            .accordion-title:before {
                 content: '\f068';
             }
-            .accrodion-title {
+            .accordion-title {
                 background-color: $thm-base-color-2;
             }
-            .accrodion-title h4 {
+            .accordion-title h4 {
                 color: #fff;
             }
         }
 
-        .accrodion-title {
+        .accordion-title {
             background-color: #eef1f6;
             padding: 25.5px 30px;
             cursor: pointer;
@@ -60,7 +60,7 @@
             }
         }
 
-        .accrodion-content {
+        .accordion-content {
 
 
             .inner {

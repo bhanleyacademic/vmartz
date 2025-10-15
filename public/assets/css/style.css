@@ -21,7 +21,7 @@
 * 15, about styles
 * 16, team styles
 * 17, testimonials styles
-* 18, accrodion styles
+* 18, accordion styles
 * 19, campaign styles
 * 20, social-shares styles
 * 21, service styles
@@ -32,6 +32,11 @@
 /*
 * 1, common styles
 */
+:root {
+  --vicYellow: #F5C968;
+  --vicBlue: #4352A3;
+  --vicRed: #990000;
+}
 body {
   font-family: "Barlow";
   color: #7c859b;
@@ -61,10 +66,10 @@ h6 {
   overflow: hidden; }
 
 .thm-base-bg {
-  background-color: #1f5ad2; }
+  background-color: var(--vicBlue); }
 
 .thm-base-bg-2 {
-  background-color: #d41e44; }
+  background-color: var(--vicRed); }
 
 .thm-gray-bg {
   background-color: #eef1f6; }
@@ -92,7 +97,7 @@ h6 {
 .block-title {
   margin-bottom: 60px; }
   .block-title__tag-line {
-    color: #d41e44;
+    color: var(--vicRed);
     margin: 0;
     font-size: 20px;
     font-weight: 500;
@@ -537,7 +542,8 @@ h6 {
     padding: 18px 0; }
 
 .topbar-two {
-  background-color: #d41e44;
+  background-color: var(--vicBlue);
+  color: #eee;
   padding-top: 33px;
   padding-bottom: 33px; }
   .topbar-two .container {
@@ -560,11 +566,12 @@ h6 {
     display: flex;
     align-items: center; }
     .topbar-two__left a {
-      font-size: 16px;
-      color: #fff;
+      font-size: 17px;
+      color: var(--vicYellow);
+      font-weight: bold;
       transition: all .4s ease; }
       .topbar-two__left a:hover {
-        color: #0c1a3c; }
+        color: #FFFFFF; }
       .topbar-two__left a + a {
         margin-left: 30px; }
     @media (max-width: 991px) {
@@ -1988,7 +1995,7 @@ h6 {
         margin-bottom: 30px; } }
 
 .cta-two {
-  background-image: url(../images/background/cta-1-1-bg.jpg);
+  background-image: url(../images/background/victoria-bg-1-2.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -2458,7 +2465,7 @@ h6 {
   padding-bottom: 80px; }
   .about-two__content {
     margin-bottom: 40px; }
-  .about-two .faq-accrodion {
+  .about-two .faq-accordion {
     margin-bottom: 40px; }
   .about-two .img-fluid {
     width: 100%;
@@ -2694,7 +2701,7 @@ h6 {
   position: relative;
   padding: 109px 0; }
   .testimonials-one:before {
-    content: '\f099';
+    /*content: '\f099';*/
     font-family: 'FontAwesome';
     color: #fff;
     font-size: 200px;
@@ -2833,26 +2840,26 @@ h6 {
     opacity: .7; }
 
 /*
-* 18, accrodion styles
+* 18, accordion styles
 */
-.faq-accrodion .accrodion + .accrodion {
+.faq-accordion .accordion + .accordion {
   margin-top: 10px; }
-.faq-accrodion .accrodion.active .accrodion-title:before {
+.faq-accordion .accordion.active .accordion-title:before {
   content: '\f068'; }
-.faq-accrodion .accrodion.active .accrodion-title {
+.faq-accordion .accordion.active .accordion-title {
   background-color: #d41e44; }
-.faq-accrodion .accrodion.active .accrodion-title h4 {
+.faq-accordion .accordion.active .accordion-title h4 {
   color: #fff; }
-.faq-accrodion .accrodion .accrodion-title {
+.faq-accordion .accordion .accordion-title {
   background-color: #eef1f6;
   padding: 25.5px 30px;
   cursor: pointer;
   position: relative;
   transition: all .4s ease; }
   @media (max-width: 375px) {
-    .faq-accrodion .accrodion .accrodion-title {
+    .faq-accordion .accordion .accordion-title {
       padding-right: 50px; } }
-  .faq-accrodion .accrodion .accrodion-title:before {
+  .faq-accordion .accordion .accordion-title:before {
     content: '\f067';
     font-family: 'FontAwesome';
     font-size: 10px;
@@ -2868,19 +2875,19 @@ h6 {
     top: 50%;
     right: 15px;
     transform: translateY(-50%); }
-  .faq-accrodion .accrodion .accrodion-title h4 {
+  .faq-accordion .accordion .accordion-title h4 {
     margin: 0;
     color: #0c1a3c;
     font-size: 16px;
     font-weight: 700; }
     @media (max-width: 375px) {
-      .faq-accrodion .accrodion .accrodion-title h4 {
+      .faq-accordion .accordion .accordion-title h4 {
         line-height: 1.4em; } }
-.faq-accrodion .accrodion .accrodion-content .inner {
+.faq-accordion .accordion .accordion-content .inner {
   padding: 0 35px;
   padding-top: 30px;
   padding-bottom: 25px; }
-.faq-accrodion .accrodion .accrodion-content p {
+.faq-accordion .accordion .accordion-content p {
   margin: 0;
   color: #7c859b;
   font-size: 18px;

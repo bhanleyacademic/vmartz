@@ -1,10 +1,14 @@
 ---
+import {Image} from "astro:assets";
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
-import { Image } from 'astro:assets';
+import vicsig from '../../public/assets/images/resources/victoria-sig-light.png';
+import victoria from '../../public/assets/images/VictoriaMartz-Headshots-2025-8384-scaled-e1756160485443.jpg'
+
+
 import { getCollection } from 'astro:content';
 ---
 <!DOCTYPE html>
@@ -23,12 +27,12 @@ import { getCollection } from 'astro:content';
             <div class="container">
                 <div class="inner-container">
                     <div class="topbar-one__left">
-                        <a href="mailto:needhelp@potisen.com">needhelp@potisen.com</a>
+                        <a href="mailto:needhelp@Victoria.com">needhelp@Victoria.com</a>
                         <a href="tel:666-888-0000">666 888 0000</a>
                     </div><!-- /.topbar-one__left -->
                     <div class="topbar-one__right">
-                        <a href="donation.html"><i class="fa fa-money"></i> Donate Now</a>
-                        <a href="volunteer.html"><i class="fa fa-user-o"></i>Join Us</a>
+                        <a href="donation.html"><i class="fa-solid fa-money"></i> Donate Now</a>
+                        <a href="volunteer.html"><i class="fa-solid fa-user-o"></i>Join Us</a>
                     </div><!-- /.topbar-one__right -->
                 </div><!-- /.inner-container -->
             </div><!-- /.container -->
@@ -40,8 +44,8 @@ import { getCollection } from 'astro:content';
             </div><!-- /.static-banner-one__bg -->
             <div class="container">
                 <h2 class="static-banner-one__title">
-                    Let's Move <br />
-                    America <span class="typed-effect" id="type-1" data-strings="Forward, Powerful"></span>
+                    Let's Make <br />
+                    Disctrict 55 <span class="typed-effect" id="type-1" data-strings="Forward, Powerful"></span>
                 </h2>
                 <p class="static-banner-one__text">Become a part of our campaign, sign up for updates.</p>
                 <form class="static-banner-one__form mc-form" data-url="https://xyz.us18.list-manage.com/subscribe/post?u=20e91746ef818cd941998c598&amp;id=cc0ee8140e">
@@ -64,8 +68,8 @@ import { getCollection } from 'astro:content';
                     <div class="col-xl-4 col-lg-12">
                         <div class="about-four__content">
                             <div class="block-title text-left">
-                                <p class="block-title__tag-line">Potisen Politics</p>
-                                <h2 class="block-title__title">We can build <br> better future <br> together</h2><!-- /.block-title__title -->
+                                <p class="block-title__tag-line">Victoria Martz</p>
+                                <h2 class="block-title__title">We can build a<br> better future <br> together</h2><!-- /.block-title__title -->
                             </div><!-- /.block-title -->
                             <ul class="list-unstyled about-four__list">
                                 <li>
@@ -95,14 +99,14 @@ import { getCollection } from 'astro:content';
                         <div class="row low-gutters">
                             <div class="col-md-6 wow fadeInUp" data-wow-duration="1500ms">
                                 <div class="about-four__image">
-                                    <img src="/assets/images/resources/about-1-1.jpg" class="img-fluid" alt="Awesome Image" />
-                                    <img src="/assets/images/resources/sign.png" class="about-four__sign" alt="Awesome Image" />
+                                    <Image src={victoria} width={379} height={432} class="img-fluid" alt="Victoria Martz" />
+                                    <Image src={vicsig} alt="Victoria Martz Signature" width={145} height={91} class="about-four__sign" />
                                 </div><!-- /.about-four__image -->
                             </div><!-- /.col-md-6 -->
                             <div class="col-md-6">
                                 <div class="about-four__box thm-base-bg-2 wow fadeInUp" data-wow-duration="1500ms">
                                     <div class="about-four__box-top">
-                                        <i class="potisen-icon-poll"></i>
+                                        <i class="Victoria-icon-poll"></i>
                                         <h4 class="about-four__box-title">Vote Status</h4><!-- /.about-four__box-title -->
                                     </div><!-- /.about-four__box-top -->
                                     <p class="about-four__box-text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour or randomised.</p><!-- /.about-four__box-text -->
@@ -134,20 +138,20 @@ import { getCollection } from 'astro:content';
                         <div class="about-three__content">
                             <div class="block-title text-left">
                                 <img src="/assets/images/resources/sec-title-star.png" alt="Awesome Image" class="wow rotateIn" data-wow-duration="1500ms">
-                                <p class="block-title__tag-line">About Potisen</p>
+                                <p class="block-title__tag-line">About Victoria</p>
                                 <h2 class="block-title__title">Mission and Vision</h2><!-- /.block-title__title -->
                             </div><!-- /.block-title -->
                             <div class="about-three__box-wrap">
                                 <div class="about-three__box">
-                                    <i class="potisen-icon-bid"></i>
+                                    <i class="Victoria-icon-bid"></i>
                                     <h4 class="about-three__box-title">Civil Rights <br> Attorney</h4><!-- /.about-three__box-title -->
                                 </div><!-- /.about-three__box -->
                                 <div class="about-three__box">
-                                    <i class="potisen-icon-work"></i>
+                                    <i class="Victoria-icon-work"></i>
                                     <h4 class="about-three__box-title">Majored in <br> Political</h4><!-- /.about-three__box-title -->
                                 </div><!-- /.about-three__box -->
                                 <div class="about-three__box">
-                                    <i class="potisen-icon-politics"></i>
+                                    <i class="Victoria-icon-politics"></i>
                                     <h4 class="about-three__box-title">Political <br> Solutions</h4><!-- /.about-three__box-title -->
                                 </div><!-- /.about-three__box -->
                             </div><!-- /.about-three__box-wrap -->
@@ -199,31 +203,31 @@ import { getCollection } from 'astro:content';
                 <div class="row">
                     <div class="column-5">
                         <div class="campaing-one__single">
-                            <i class="potisen-icon-sprout"></i>
+                            <i class="Victoria-icon-sprout"></i>
                             <h3 class="campaing-one__title"><a href="#">Environment</a></h3><!-- /.campaing-one__title -->
                         </div><!-- /.campaing-one__single -->
                     </div><!-- /.column-5 -->
                     <div class="column-5">
                         <div class="campaing-one__single">
-                            <i class="potisen-icon-care"></i>
+                            <i class="Victoria-icon-care"></i>
                             <h3 class="campaing-one__title"><a href="#">Healthcare</a></h3><!-- /.campaing-one__title -->
                         </div><!-- /.campaing-one__single -->
                     </div><!-- /.column-5 -->
                     <div class="column-5">
                         <div class="campaing-one__single">
-                            <i class="potisen-icon-medal"></i>
+                            <i class="Victoria-icon-medal"></i>
                             <h3 class="campaing-one__title"><a href="#">Tax Returns</a></h3><!-- /.campaing-one__title -->
                         </div><!-- /.campaing-one__single -->
                     </div><!-- /.column-5 -->
                     <div class="column-5">
                         <div class="campaing-one__single">
-                            <i class="potisen-icon-idea"></i>
+                            <i class="Victoria-icon-idea"></i>
                             <h3 class="campaing-one__title"><a href="#">Economy</a></h3><!-- /.campaing-one__title -->
                         </div><!-- /.campaing-one__single -->
                     </div><!-- /.column-5 -->
                     <div class="column-5">
                         <div class="campaing-one__single">
-                            <i class="potisen-icon-mortarboard"></i>
+                            <i class="Victoria-icon-mortarboard"></i>
                             <h3 class="campaing-one__title"><a href="#">Education</a></h3><!-- /.campaing-one__title -->
                         </div><!-- /.campaing-one__single -->
                     </div><!-- /.column-5 -->
@@ -324,32 +328,32 @@ import { getCollection } from 'astro:content';
                         </div><!-- /.about-two__content -->
                     </div><!-- /.col-lg-6 -->
                     <div class="col-lg-6">
-                        <div class="accrodion-grp" data-grp-name="faq-accrodion">
-                            <div class="accrodion active">
-                                <div class="accrodion-title">
+                        <div class="accordion-grp" data-grp-name="faq-accordion">
+                            <div class="accordion active">
+                                <div class="accordion-title">
                                     <h4>Political organization that typically seeks</h4>
                                 </div>
-                                <div class="accrodion-content">
+                                <div class="accordion-content">
                                     <div class="inner">
                                         <p>It has survived not only five centuries but also the leap into electronic type setting. when an unknown printer took a galley of type and scrambled to make a type specimen book.</p>
                                     </div><!-- /.inner -->
                                 </div>
                             </div>
-                            <div class="accrodion ">
-                                <div class="accrodion-title">
+                            <div class="accordion ">
+                                <div class="accordion-title">
                                     <h4>Strong politics plan require experience</h4>
                                 </div>
-                                <div class="accrodion-content">
+                                <div class="accordion-content">
                                     <div class="inner">
                                         <p>It has survived not only five centuries but also the leap into electronic type setting. when an unknown printer took a galley of type and scrambled to make a type specimen book.</p>
                                     </div><!-- /.inner -->
                                 </div>
                             </div>
-                            <div class="accrodion">
-                                <div class="accrodion-title">
+                            <div class="accordion">
+                                <div class="accordion-title">
                                     <h4>Attract and retain quality high paying customers</h4>
                                 </div>
-                                <div class="accrodion-content">
+                                <div class="accordion-content">
                                     <div class="inner">
                                         <p>It has survived not only five centuries but also the leap into electronic type setting. when an unknown printer took a galley of type and scrambled to make a type specimen book.</p>
                                     </div><!-- /.inner -->
@@ -368,14 +372,14 @@ import { getCollection } from 'astro:content';
                             <div class="container">
                                 <div class="row align-items-center">
                                     <div class="col-lg-7">
-                                        <i class="potisen-icon-quote testimonials-two__icon"></i>
+                                        <i class="Victoria-icon-quote testimonials-two__icon"></i>
                                         <h3 class="testimonials-two__text">This is due to their excellent service, competitive pricing and customer support. It’s throughly refresing to get such a personal touch.</h3>
                                         <p class="testimonials-two__name">Gary Hilk</p><!-- /.testimonials-two__name -->
                                     </div><!-- /.col-lg-7 -->
                                     <div class="col-lg-5 d-flex justify-content-xl-end justify-content-sm-start">
                                         <div class="testimonials-two__btn-wrap">
                                             <a href="#" class="testimonials-two__btn">
-                                                <i class="fa fa-play"></i>
+                                                <i class="fa-solid fa-play"></i>
                                             </a>
                                             <span class="testimonials-two__btn-tag-line">Watch Campaigns <img src="/assets/images/resources/video-arrow.png" alt="Awesome Image" /></span>
                                         </div><!-- /.testimonials-two__btn-wrap -->
@@ -389,14 +393,14 @@ import { getCollection } from 'astro:content';
                             <div class="container">
                                 <div class="row align-items-center">
                                     <div class="col-lg-7">
-                                        <i class="potisen-icon-quote testimonials-two__icon"></i>
+                                        <i class="Victoria-icon-quote testimonials-two__icon"></i>
                                         <h3 class="testimonials-two__text">This is due to their excellent service, competitive pricing and customer support. It’s throughly refresing to get such a personal touch.</h3>
                                         <p class="testimonials-two__name">Naida Bowline</p><!-- /.testimonials-two__name -->
                                     </div><!-- /.col-lg-7 -->
                                     <div class="col-lg-5 d-flex justify-content-xl-end justify-content-sm-start">
                                         <div class="testimonials-two__btn-wrap">
                                             <a href="#" class="testimonials-two__btn">
-                                                <i class="fa fa-play"></i>
+                                                <i class="fa-solid fa-play"></i>
                                             </a>
                                             <span class="testimonials-two__btn-tag-line">Watch Campaigns <img src="/assets/images/resources/video-arrow.png" alt="Awesome Image" /></span>
                                         </div><!-- /.testimonials-two__btn-wrap -->
@@ -410,14 +414,14 @@ import { getCollection } from 'astro:content';
                             <div class="container">
                                 <div class="row align-items-center">
                                     <div class="col-lg-7">
-                                        <i class="potisen-icon-quote testimonials-two__icon"></i>
+                                        <i class="Victoria-icon-quote testimonials-two__icon"></i>
                                         <h3 class="testimonials-two__text">This is due to their excellent service, competitive pricing and customer support. It’s throughly refresing to get such a personal touch.</h3>
                                         <p class="testimonials-two__name">Caroline Ocheltree</p><!-- /.testimonials-two__name -->
                                     </div><!-- /.col-lg-7 -->
                                     <div class="col-lg-5 d-flex justify-content-xl-end justify-content-sm-start">
                                         <div class="testimonials-two__btn-wrap">
                                             <a href="#" class="testimonials-two__btn">
-                                                <i class="fa fa-play"></i>
+                                                <i class="fa-solid fa-play"></i>
                                             </a>
                                             <span class="testimonials-two__btn-tag-line">Watch Campaigns <img src="/assets/images/resources/video-arrow.png" alt="Awesome Image" /></span>
                                         </div><!-- /.testimonials-two__btn-wrap -->
@@ -431,14 +435,14 @@ import { getCollection } from 'astro:content';
                             <div class="container">
                                 <div class="row align-items-center">
                                     <div class="col-lg-7">
-                                        <i class="potisen-icon-quote testimonials-two__icon"></i>
+                                        <i class="Victoria-icon-quote testimonials-two__icon"></i>
                                         <h3 class="testimonials-two__text">This is due to their excellent service, competitive pricing and customer support. It’s throughly refresing to get such a personal touch.</h3>
                                         <p class="testimonials-two__name">Corey Gessner</p><!-- /.testimonials-two__name -->
                                     </div><!-- /.col-lg-7 -->
                                     <div class="col-lg-5 d-flex justify-content-xl-end justify-content-sm-start">
                                         <div class="testimonials-two__btn-wrap">
                                             <a href="#" class="testimonials-two__btn">
-                                                <i class="fa fa-play"></i>
+                                                <i class="fa-solid fa-play"></i>
                                             </a>
                                             <span class="testimonials-two__btn-tag-line">Watch Campaigns <img src="/assets/images/resources/video-arrow.png" alt="Awesome Image" /></span>
                                         </div><!-- /.testimonials-two__btn-wrap -->
@@ -493,7 +497,7 @@ import { getCollection } from 'astro:content';
             <div class="container">
                 <div class="block-title text-center">
                     <img src="/assets/images/resources/sec-title-star.png" alt="Awesome Image" class="wow rotateIn" data-wow-duration="1500ms">
-                    <p class="block-title__tag-line">Potisen Updates</p>
+                    <p class="block-title__tag-line">Victoria Updates</p>
                     <h2 class="block-title__title">From Campaign</h2><!-- /.block-title__title -->
                 </div><!-- /.block-title -->
                 <div class="row">
@@ -501,7 +505,7 @@ import { getCollection } from 'astro:content';
                         <div class="blog-one__single">
                             <div class="blog-one__image">
                                 <img src="/assets/images/blog/blog-1-1.jpg" alt="">
-                                <a class="blog-one__more-link" href="blog-details.html"><i class="fa fa-link"></i>
+                                <a class="blog-one__more-link" href="blog-details.html"><i class="fa-solid fa-link"></i>
                                     <!-- /.fa fa-link --></a>
                             </div><!-- /.blog-one__image -->
                             <div class="blog-one__content">
@@ -519,7 +523,7 @@ import { getCollection } from 'astro:content';
                         <div class="blog-one__single">
                             <div class="blog-one__image">
                                 <img src="/assets/images/blog/blog-1-2.jpg" alt="">
-                                <a class="blog-one__more-link" href="blog-details.html"><i class="fa fa-link"></i>
+                                <a class="blog-one__more-link" href="blog-details.html"><i class="fa-solid fa-link"></i>
                                     <!-- /.fa fa-link --></a>
                             </div><!-- /.blog-one__image -->
                             <div class="blog-one__content">
@@ -538,7 +542,7 @@ import { getCollection } from 'astro:content';
                         <div class="blog-one__single">
                             <div class="blog-one__image">
                                 <img src="/assets/images/blog/blog-1-3.jpg" alt="">
-                                <a class="blog-one__more-link" href="blog-details.html"><i class="fa fa-link"></i>
+                                <a class="blog-one__more-link" href="blog-details.html"><i class="fa-solid fa-link"></i>
                                     <!-- /.fa fa-link --></a>
                             </div><!-- /.blog-one__image -->
                             <div class="blog-one__content">
@@ -609,10 +613,10 @@ import { getCollection } from 'astro:content';
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="social-shares__facebook thm-base-bg text-center">
-                            <i class="fa fa-facebook-square"></i>
+                            <i class="fab fa-facebook-square"></i>
                             <p class="social-shares__facebook-name">Facebook</p><!-- /.social-shares__facebook-name -->
                             <h3 class="social-shares__facebook-count">280,366</h3><!-- /.social-shares__facebook-count -->
-                            <a href="#" class="social-shares__facebook-link">#potisenfacebook</a>
+                            <a href="#" class="social-shares__facebook-link">#Victoriafacebook</a>
                         </div><!-- /.social-shares__facebook -->
                     </div><!-- /.col-lg-4 -->
                     <div class="col-lg-8">
@@ -624,10 +628,10 @@ import { getCollection } from 'astro:content';
                                         <p class="social-shares__twitter-text">A Bill of Rights is what the people are entitled to against <a href="#"><strong>#politics</strong></a> every government, and what no just government should refuse, or rest on inference. <a href="#">https://t.co/LpyuHZaOMK</a> <a href="#">#ASMSG</a></p><!-- /.social-shares__twitter-text -->
                                         <div class="social-shares__twitter-info">
                                             <p class="social-shares__twitter-info-text">
-                                                <a href="#">@potisentwitterfollow</a>
+                                                <a href="#">@Victoriatwitterfollow</a>
                                                 <span>5 minutes ago</span>
                                             </p><!-- /.social-shares__twitter-info-text -->
-                                            <i class="fa fa-twitter"></i>
+                                            <i class="fab fa-twitter"></i>
                                         </div><!-- /.social-shares__twitter-info -->
                                     </div><!-- /.social-shares__twitter-single -->
                                 </div><!-- /.item -->
@@ -636,10 +640,10 @@ import { getCollection } from 'astro:content';
                                         <p class="social-shares__twitter-text">A Bill of Rights is what the people are entitled to against <a href="#"><strong>#politics</strong></a> every government, and what no just government should refuse, or rest on inference. <a href="#">https://t.co/LpyuHZaOMK</a> <a href="#">#ASMSG</a></p><!-- /.social-shares__twitter-text -->
                                         <div class="social-shares__twitter-info">
                                             <p class="social-shares__twitter-info-text">
-                                                <a href="#">@potisentwitterfollow</a>
+                                                <a href="#">@Victoriatwitterfollow</a>
                                                 <span>5 minutes ago</span>
                                             </p><!-- /.social-shares__twitter-info-text -->
-                                            <i class="fa fa-twitter"></i>
+                                            <i class="fab fa-twitter"></i>
                                         </div><!-- /.social-shares__twitter-info -->
                                     </div><!-- /.social-shares__twitter-single -->
                                 </div><!-- /.item -->
@@ -648,10 +652,10 @@ import { getCollection } from 'astro:content';
                                         <p class="social-shares__twitter-text">A Bill of Rights is what the people are entitled to against <a href="#"><strong>#politics</strong></a> every government, and what no just government should refuse, or rest on inference. <a href="#">https://t.co/LpyuHZaOMK</a> <a href="#">#ASMSG</a></p><!-- /.social-shares__twitter-text -->
                                         <div class="social-shares__twitter-info">
                                             <p class="social-shares__twitter-info-text">
-                                                <a href="#">@potisentwitterfollow</a>
+                                                <a href="#">@Victoriatwitterfollow</a>
                                                 <span>5 minutes ago</span>
                                             </p><!-- /.social-shares__twitter-info-text -->
-                                            <i class="fa fa-twitter"></i>
+                                            <i class="fab fa-twitter"></i>
                                         </div><!-- /.social-shares__twitter-info -->
                                     </div><!-- /.social-shares__twitter-single -->
                                 </div><!-- /.item -->
@@ -667,7 +671,7 @@ import { getCollection } from 'astro:content';
     </div><!-- /.page-wrapper -->
 
 
-    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa-solid fa-angle-up"></i></a>
 
 
     <script src="/assets/js/jquery.min.js" is:inline></script>
